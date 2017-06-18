@@ -3,7 +3,7 @@ These days, I try to be involved in any Containers, DevOps, Automation, etc. rel
 
 In this first multiple-part blog post series I will describe the motivation behind it, the requirements & constraints, architecture and of course the “how to” – let’s begin.
 
-#### H4 Motivation, Requirements & Constraints
+#### Motivation, Requirements & Constraints
 
 The motivation for this one was pretty straightforward – start looking into Docker containers and integrate several applications with it.
 
@@ -16,7 +16,7 @@ Store Docker images in the same private container registry which will be used by
 Unified containers orchestration platform across all stacks
 Going back to the constraint part for a second, the reason I consider this a constraint is because if the production was also part of Azure, I wouldn’t have to do anything with regard to vSphere and everything was pure “cloudish”.
 
-#### H4 Dev to Production CI/CD Flow
+#### Dev to Production CI/CD Flow
 
 The continuous integration and deployment flow presented below goes as follow:
 
@@ -27,7 +27,7 @@ The “Production Ready” container is being pulled to the DC/OS production clu
 
 ![alt text](https://i1.wp.com/imallvirtual.com/wp-content/uploads/2017/05/Flow.jpg)
 
-#### H4 Architecture
+#### Architecture
 
 Below is the infrastructure logical design for our deployment which will serve the process previously described. Please note that I will not touch the Visual Studio Team Services (VSTS) or the Team Foundation Server (TFS) in this series as I wanted to focus more on the infra side of things.  
 
