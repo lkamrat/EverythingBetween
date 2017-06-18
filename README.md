@@ -1,4 +1,4 @@
-# EverythingBetween
+# Mesosphere DCOS, Azure, Docker, VMware & Everything Between
 These days, I try to be involved in any Containers, DevOps, Automation, etc. related discussion. Part of my role is to consult my customers around how to architect their containers platform and orchestration tools in Azure. But what happens when you have a chance to do something cool like architecting a solution which involves Mesosphere DC/OS, Azure Container Service, Azure Container Registry, Docker and VMware vSphere?! Let’s find out…
 
 In this first multiple-part blog post series I will describe the motivation behind it, the requirements & constraints, architecture and of course the “how to” – let’s begin.
@@ -27,7 +27,7 @@ The “Production Ready” container is being pulled to the DC/OS production clu
 
 ![alt text](https://i1.wp.com/imallvirtual.com/wp-content/uploads/2017/05/Flow.jpg)
 
-Architecture
+#### H4 Architecture
 
 Below is the infrastructure logical design for our deployment which will serve the process previously described. Please note that I will not touch the Visual Studio Team Services (VSTS) or the Team Foundation Server (TFS) in this series as I wanted to focus more on the infra side of things.  
 
