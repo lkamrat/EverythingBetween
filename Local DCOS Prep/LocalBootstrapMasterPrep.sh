@@ -14,7 +14,7 @@ wget http://dl.fedoraproject.org/pub/epel/7/x86_64/e/epel-release-7-9.noarch.rpm
 rpm -ivh epel-release-7-9.noarch.rpm
 yum --enablerepo=epel -y install sshpass
 cat ~/.ssh/id_rsa.pub | ssh root@xLab-DCOS-Private-Agent-03 "mkdir -p ~/.ssh && cat >>  ~/.ssh/authorized_keys"
-sshpass -p "Bimba1$$" ssh root@xLab-DCOS-Master-02
+sshpass -p "YourPass" ssh root@xLab-DCOS-Master-02
 sed -i 's/^#PasswordAuthentication .*/PasswordAuthentication no/' /etc/ssh/sshd_config
 sed -i 's/^#PermitRootLogin .*/PermitRootLogin without-password/' /etc/ssh/sshd_config
 reboot
@@ -37,6 +37,6 @@ reboot
 wget http://dl.fedoraproject.org/pub/epel/7/x86_64/e/epel-release-7-9.noarch.rpm
 rpm -ivh epel-release-7-9.noarch.rpm
 yum --enablerepo=epel -y install sshpass
-sshpass -p "Bimba1$$" ssh root@xLab-DCOS-Master-02
+sshpass -p "YourPass" ssh root@xLab-DCOS-Master-02
 #yum remove dnsmasq -y
 #reboot
