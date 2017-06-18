@@ -1,0 +1,52 @@
+{
+  "id": "integration",
+  "cmd": null,
+  "cpus": 0.1,
+  "mem": 512,
+  "disk": 0,
+  "instances": 1,
+  "container": {
+    "docker": {
+      "image": "xlabacr.azurecr.io/xlabimages/tutum:latest",
+      "forcePullImage": true,
+      "privileged": false,
+      "portMappings": [
+        {
+          "containerPort": 80,
+          "protocol": "tcp",
+          "name": "80",
+          "servicePort": 10000
+        }
+      ],
+      "network": "BRIDGE"
+    }
+  },
+  "healthChecks": [
+    {
+      "protocol": "HTTP",
+      "path": "/",
+      "gracePeriodSeconds": 10,
+      "intervalSeconds": 2,
+      "timeoutSeconds": 10,
+      "maxConsecutiveFailures": 10,
+      "ignoreHttp1xx": false
+    }
+  ],
+  "labels": {
+    "HAPROXY_GROUP": "external",
+    "HAPROXY_0_VHOST": "xlabdcosagents.westeurope.cloudapp.azure.com",
+    "HAPROXY_0_MODE": "http"
+  },
+  "env": null,
+  "executor": null,
+"fetch" : [
+    {
+      "uri" : "https://xlabacrsa.blob.core.windows.net/acrauthconfig/docker.tar.gz",
+      "extract" : true,
+      "outputFile" : "dockerConfig.tar.gz" 
+    }
+    ],
+  "constraints": null,
+  "acceptedResourceRoles": null,
+  "user": null
+}
